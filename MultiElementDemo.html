@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image { width: 300px; height: 300px; position: relative; }
+        .imageElement { position: absolute; }
+        .imageFilter { width: 300px; height: 300px; background-color: #AAA; opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <h1>MultiElements</h1>
+
+    <div class="image">
+        <img src="images/DummyBlack_300x300.png" class="imageElement">
+    </div>
+
+    <br>
+    <div class="image">
+          <img src="images/DummyRed_300x300.png" class="imageElement">
+    </div>
+
+      <br>
+    <div class="image">
+          <img src="images/DummyGreen_300x300.png" class="imageElement">
+    </div>
+
+    <script>
+        function clickImage (t) {
+          /*let tgt = document.getElementsByClassName("image")[0];
+          tgt.addEventListener("click", function(){
+              console.log(tgt);
+              let filter = document.createElement("div");
+              filter.classList.add("imageFilter");
+              filter.innerText = "Clicked!"
+              tgt.appendChild(filter);
+          }, false);*/
+    
+          console.log(t);
+          if(t.getElementsByClassName("imageFilter").length > 0) return;
+          let filter = document.createElement("div");
+          filter.classList.add("imageFilter");
+          filter.innerText = "Clicked!"
+          t.appendChild(filter);
+        }
+    
+        window.addEventListener("click", function(e){
+            console.log(e);
+            console.log(e.toElement);
+            let targetElement = e.toElement.parentNode;
+            if(targetElement.getElementsByClassName("imageFilter").length > 0) return;
+            let filter = document.createElement("div");
+            filter.classList.add("imageFilter");
+            filter.innerText = "Clicked!"
+            targetElement.appendChild(filter);
+        }, false);
+    </script>
+</body>
+</html>
