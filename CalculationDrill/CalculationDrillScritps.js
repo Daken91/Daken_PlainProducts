@@ -90,23 +90,25 @@ function errorMessageReset () {
 function drillProgress (target, isEnd) {
     const curtain = target;
     const precount = parseInt(curtain.innerText);
-    if(!precount) return;
+    if (!precount) return;
     curtain.style.display = "block";
     let currentCount = precount;
     let timer = setInterval( function () {
-        if(window.isInputError){
+        if (window.isInputError){
             curtain.innerText = precount.toString();
             curtain.style.display = "none";
             return;
         }
         currentCount--;
         curtain.innerText = currentCount.toString();
-        if(currentCount <= 0){
+        if (isEnd && currentCount <= 5 && currentCount > 0){
+            document.getElementById("timeLimitDisplay").classList.add("timeLimitRunningOut");
+        } else if (currentCount <= 0){
             clearInterval(timer);
             curtain.innerText = precount.toString();
             curtain.style.display = "none";
-            if(isEnd) drillEnd();
-        }else if(isEnd && document.getElementById("drillEntity").getElementsByTagName("li")[0].getElementsByTagName("span").length > 1){
+            if (isEnd) drillEnd();
+        } else if (isEnd && document.getElementById("drillEntity").getElementsByTagName("li")[0].getElementsByTagName("span").length > 1){
             clearInterval(timer);
             target.style.display = "none";
         }
@@ -115,10 +117,13 @@ function drillProgress (target, isEnd) {
 
 function drillStart () {
     drillProgress(document.getElementById("countDown"), false);
+    let drill = document.getElementById("drillEntity");
+    drill.style.display = "none";
     let observer = new MutationObserver ( function (mutations) {
         if(document.getElementById("countDown").style.display === "none"){
             document.getElementById("timeLimitDisplay").style.display = "block";
             observer.disconnect();
+            drill.style.display = "block";
             drillProgress(document.getElementById("timeLimitCount"), true);
         }
     });
