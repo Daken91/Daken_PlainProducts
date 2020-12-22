@@ -15,8 +15,8 @@
         <ul id="drillEntity">
         </ul>
 
-        <input type="button" id="reloadButton" value="もう一回" onclick="window.location.reload();" style="margin: 10px 5px; display: none;">
-        <input type="button" id="endButton" value="終了" onclick="drillEnd();" style="display: none;">
+        <input type="button" id="reloadButton" value="もう一回" onclick="window.location.reload();">
+        <input type="button" id="endButton" value="終了" onclick="drillEnd();">
     </section>
      <section>
         <input type="button" id="questionCreateButton" value="問題作成" onclick="checkSetting (document.getElementsByName('numberOfQuestions')[0].value, document.getElementsByName('minimumDigits')[0].value, document.getElementsByName('maxDigits')[0].value, document.getElementsByName('timeLimitInput')[0].value);">
@@ -40,11 +40,11 @@
                 <option value="＋,－,✕,÷" selected>＋, －, ✕, ÷</option>
            </select>
         </p>
-         <p>問題数：<input type="number" name="numberOfQuestions" size="10" style="width:70px;">　（最大100問）<span class="errorMessage" id="numberOfQuestionsNull">　※問題数が設定されていません</span><span class="errorMessage" id="numberOfQuestionsIllegal">　※問題数の入力値が不適切です</span></p>
-         <p>最低桁数：<input type="number" name="minimumDigits" size="5" style="width:40px;">　（最低1桁）<span class="errorMessage" id="minimumDigitsNull">　※最低桁数が設定されていません</span><span class="errorMessage" id="minimumDigitsIllegal">　※最低桁数が不適切です</span><span class="errorMessage" id="minimumDigitsCompare">　※最低桁数が最大桁数よりも大きく設定されています</span></p>
-         <p>最大桁数：<input type="number" name="maxDigits" size="5" style="width:40px;">　（最大4桁）<span class="errorMessage" id="maxDigitsNull">　※最大桁数が設定されていません</span><span class="errorMessage" id="maxDigitsIllegal">　※最大桁数が不適切です</span><span class="errorMessage" id="maxDigitsCompare">　※最大桁数が最低桁数よりも小さく設定されています</span></p>
+         <p>問題数：<input type="number" class="wideForm" name="numberOfQuestions" size="10" >　（最大100問）<span class="errorMessage" id="numberOfQuestionsNull">　※問題数が設定されていません</span><span class="errorMessage" id="numberOfQuestionsIllegal">　※問題数の入力値が不適切です</span></p>
+         <p>最低桁数：<input type="number" class="numberForm" name="minimumDigits" size="5" >　（最低1桁）<span class="errorMessage" id="minimumDigitsNull">　※最低桁数が設定されていません</span><span class="errorMessage" id="minimumDigitsIllegal">　※最低桁数が不適切です</span><span class="errorMessage" id="minimumDigitsCompare">　※最低桁数が最大桁数よりも大きく設定されています</span></p>
+         <p>最大桁数：<input type="number" class="numberForm" name="maxDigits" size="5">　（最大4桁）<span class="errorMessage" id="maxDigitsNull">　※最大桁数が設定されていません</span><span class="errorMessage" id="maxDigitsIllegal">　※最大桁数が不適切です</span><span class="errorMessage" id="maxDigitsCompare">　※最大桁数が最低桁数よりも小さく設定されています</span></p>
          <p><input type="checkbox" name="timeLimitSetting" id="timeLimitSetting" value="1" onclick="formActive (this, document.getElementById('timeLimitInput')); formDisplay (this, document.getElementById('timeLimit'));">制限時間を設定する</p>
-         <p id="timeLimit" style="display: none;">制限時間：<input type="number" id="timeLimitInput" name="timeLimitInput" size="5" style="width:50px;" disabled>秒<span class="errorMessage" id="timeLimitNull">　※制限時間が設定されていません</span></p>
+         <p id="timeLimit" >制限時間：<input type="number" id="timeLimitInput" class="numberForm" name="timeLimitInput" size="5" disabled>秒<span class="errorMessage" id="timeLimitNull">　※制限時間が設定されていません</span></p>
      </section>
 
      <div id="timeLimitDisplay"><span id="timeLimitCount">0</span><span id="timeLimitUnit"> sec.</span></div>
