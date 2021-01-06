@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "description": "Notice alert in not https pages.",
   "content_scripts": [{
-    "matches": ["https://*/", "http://*/"],
+    "matches": ["http://*/"],
     "js": [
       "content.js"
     ]
