@@ -1,0 +1,14 @@
+{
+  "name": "profileFormWriter",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Automatical input to input forms.",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "content.js"
+    ]
+  }],
+  "options_page": "options.html",
+  "permissions": ["storage"]
+}

@@ -13,40 +13,40 @@
 <body>
     <h1>MultiElements</h1>
 
-    <div class="image">
+    <div class="image" onclick="clickImage(this)">
         <img src="images/DummyBlack_300x300.png" class="imageElement">
     </div>
 
     <br>
-    <div class="image">
+    <div class="image" onclick="clickImage(this)">
           <img src="images/DummyRed_300x300.png" class="imageElement">
     </div>
 
       <br>
-    <div class="image">
+    <div class="image" onclick="clickImage(this)">
           <img src="images/DummyGreen_300x300.png" class="imageElement">
     </div>
 
     <script>
         function clickImage (t) {
-          /*let tgt = document.getElementsByClassName("image")[0];
+          let tgt = document.getElementsByClassName("image")[0];
           tgt.addEventListener("click", function(){
               console.log(tgt);
               let filter = document.createElement("div");
               filter.classList.add("imageFilter");
               filter.innerText = "Clicked!"
               tgt.appendChild(filter);
-          }, false);*/
+          }, false);
     
-          console.log(t);
+          /*console.log(t);
           if(t.getElementsByClassName("imageFilter").length > 0) return;
           let filter = document.createElement("div");
           filter.classList.add("imageFilter");
           filter.innerText = "Clicked!"
-          t.appendChild(filter);
+          t.appendChild(filter);*/
         }
     
-        window.addEventListener("click", function(e){
+        /*window.addEventListener("click", function(e){
             console.log(e);
             console.log(e.toElement);
             let targetElement = e.toElement.parentNode;
@@ -55,7 +55,27 @@
             filter.classList.add("imageFilter");
             filter.innerText = "Clicked!"
             targetElement.appendChild(filter);
-        }, false);
+        }, false);*/
+        
+        /*let targets = document.getElementsByClassName("image");
+        let targetLength = targets.length;
+        let targetLine = [];
+        for (let i = 0; i < targetLength; i++) targetLine.push(window.pageOffset + targets[i].getBoundingClientRect().top);
+        window.addEventListener("scroll", function (e) {
+          let scrollTop = window.document.body.scrollTop || window.document.documentElement.scrollTop;
+          let crossBorderNumber = -1;
+          for (let j = 0; j < targetLength; j++) {
+            if (scrollTop >= targetLine[j] - 200 && scrollTop < targetLine[j] + 300) {
+              crossBorderNumber = j;
+              break;
+            }
+          }
+          if (crossBorderNumber !== -1) {
+            let targetElement = targets[crossBorderNumber];
+            clickImage(targetElement);
+            crossBorderNumber = -1;
+          }
+        }, false);*/
     </script>
 </body>
 </html>

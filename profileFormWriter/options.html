@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profiles</title>
+    <link rel="stylesheet" href="options.css">
+
+</head>
+<body>
+  <input type="button" id="dataSaveButton" value="Save">  <input type="button" id="dataLoadButton" value="Load">  <input type="button" id="dataClearButton" value="Clear">
+   <h2>プロフィール（日本語）</h2>
+   <h4>名前</h4>
+    <div class="form">名前（フルネーム・漢字）: <input type="text" class="inputForm wideForm" id="fullNameJPKanji" value=""></div><br>
+    <div class="form">名前（フルネーム・ひらがな）: <input type="text" class="inputForm wideForm" id="fullNameJPHira" value=""></div><br>
+    <div class="form">名前（フルネーム・カタカナ）: <input type="text" class="inputForm wideForm" id="fullNameJPKana" value=""></div><br>
+    <div class="form">姓（漢字）: <input type="text" class="inputForm narrowForm" id="lastNameJPKanji" value="">　　　名（漢字）: <input type="text" class="inputForm narrowForm" id="firstNameJPKanji" value=""></div><br>
+    <div class="form">姓（ひらがな）: <input type="text" class="inputForm narrowForm" id="lastNameJPHira" value="">　　　名（ひらがな）: <input type="text" class="inputForm narrowForm" id="firstNameJPHira" value=""></div><br>
+    <div class="form"> 姓（カタカナ）: <input type="text" class="inputForm narrowForm" id="lastNameJPKana" value="">　　　名（カタカナ）: <input type="text" class="inputForm narrowForm" id="firstNameJPKana" value=""></div><br>
+
+  <h4>住所</h4>
+    <div class="form"> 郵便番号: <input type="number" class="inputForm narrowForm" id="postalCodeJP" value=""></div><br>
+    <div class="form"> 住所（都道府県）: <input type="text" class="inputForm narrowForm" id="prefectureJPKanji" value="">　　　ふりがな: <input type="text" class="inputForm narrowForm" id="prefectureJPHira" value=""></div><br>
+    <div class="form"> 住所（市区町村）: <input type="text" class="inputForm middleForm" id="citynameJPKanji" value="">　　　ふりがな: <input type="text" class="inputForm middleForm" id="citynameJPHira" value=""></div><br>
+    <div class="form"> 住所（番地・漢字表記）: <input type="text" class="inputForm narrowForm" id="streetNumberJPKanji" value="">　　　住所（番地・数字表記）: <input type="text" class="inputForm narrowForm" id="streetNumberJP" value=""><br>
+    <div class="form"> 住所（マンションその他）: <input type="text" class="inputForm middleForm" id="buildingJPKanji" value="">　　　ふりがな: <input type="text" class="inputForm middleForm" id="buildingJPHira" value=""></div><br>
+
+  <h4>電話番号</h4>
+    <div class="form"> 固定電話番号: <input type="number" class="inputForm middleForm" id="phoneNumberJP" value="">　　　固定電話番号（ハイフンあり）: <input type="text" class="inputForm middleForm" id="phoneNumberJPdivided" value=""></div><br>
+    <div class="form"> 携帯電話番号: <input type="number" class="inputForm middleForm" id="mobileNumberJP" value="">　　　携帯電話番号（ハイフンあり）: <input type="text" class="inputForm middleForm" id="mobileNumberJPdivided" value=""></div><br>
+
+  <h4>生年月日</h4>
+    <div class="form"> 漢字表記あり（フル・西暦）: <input type="text" class="inputForm middleForm" id="birthJP" value=""></div><br>
+    <div class="form"> 漢字表記あり（フル・和暦）: <input type="text" class="inputForm middleForm" id="birthJPNengo" value=""></div><br>
+    <div class="form"> 数値のみ（フル）: <input type="number" class="inputForm middleForm" id="birthJPNumber" value=""></div><br>
+    <div class="form"> 生年（西暦）: <input type="number" class="inputForm narrowForm" id="birthYearJP" value="">　　　生年（和暦）: <input type="text" class="inputForm narrowForm" id="birthYearJPNengo" value=""></div><br>
+    <div class="form"> 産まれ月: <input type="number" class="inputForm narrowForm" id="birthMonthJP" value="">月　　　誕生日: <input type="number" class="inputForm narrowForm" id="birthDayJP" value="">日</div><br>
+
+  <h4>クレジットカード番号</h4>
+    <div class="form"> クレジットカード番号: <input type="number" class="inputForm middleForm" id="cardNumberJP" value="">　　　クレジットカード番号（空白あり）: <input type="text" class="inputForm middleForm" id="cardNumberJPdivided" value=""></div><br>
+    <div class="form"> セキュリティコード: <input type="number" class="inputForm narrowForm" id="cardSecurityNumberJP" value=""></div><br>
+
+  <h4>メールアドレス</h4>
+    <div class="form"> 1: <input type="email" class="inputForm middleForm" id="mailAddressJP1" value=""></div><br>
+    <div class="form"> 2: <input type="email" class="inputForm middleForm" id="mailAddressJP2" value=""></div><br>
+    <div class="form"> 3: <input type="email" class="inputForm middleForm" id="mailAddressJP3" value=""></div><br>
+    <div class="form"> 4: <input type="email" class="inputForm middleForm" id="mailAddressJP4" value=""></div><br>
+    <div class="form"> 5: <input type="email" class="inputForm middleForm" id="mailAddressJP5" value=""></div><br>
+
+  <h4>パスワード関係</h4>
+    <div class="form"> 1: <input type="text" class="inputForm middleForm" id="passwordJP1" value=""></div><br>
+    <div class="form"> 2: <input type="text" class="inputForm middleForm" id="passwordJP2" value=""></div><br>
+    <div class="form"> 3: <input type="text" class="inputForm middleForm" id="passwordJP3" value=""></div><br>
+    <div class="form"> 4: <input type="text" class="inputForm middleForm" id="passwordJP4" value=""></div><br>
+    <div class="form"> 5: <input type="text" class="inputForm middleForm" id="passwordJP5" value=""></div><br>
+    <div class="form"> 6: <input type="text" class="inputForm middleForm" id="passwordJP6" value=""></div><br>
+    <div class="form"> 7: <input type="text" class="inputForm middleForm" id="passwordJP7" value=""></div><br>
+    <div class="form"> 8: <input type="text" class="inputForm middleForm" id="passwordJP8" value=""></div><br>
+    <div class="form"> 9: <input type="text" class="inputForm middleForm" id="passwordJP9" value=""></div><br>
+    <div class="form"> 10: <input type="text" class="inputForm middleForm" id="passwordJP10" value=""></div><br>
+    <div class="form"> 11: <input type="text" class="inputForm middleForm" id="passwordJP11" value=""></div><br>
+    <div class="form"> 12: <input type="text" class="inputForm middleForm" id="passwordJP12" value=""></div><br>
+    <div class="form"> 13: <input type="text" class="inputForm middleForm" id="passwordJP13" value=""></div><br>
+    <div class="form"> 14: <input type="text" class="inputForm middleForm" id="passwordJP14" value=""></div><br>
+    <div class="form"> 15: <input type="text" class="inputForm middleForm" id="passwordJP15" value=""></div><br>
+
+  <h2>Profile(English)</h2>
+   <h4>Name</h4>
+    <div class="form">FullName: <input type="text" class="inputForm wideForm" id="fullNameEN" value=""></div><br>
+    <div class="form">Last Name: <input type="text" class="inputForm narrowForm" id="lastNameEN" value="">　　　First Name: <input type="text" class="inputForm narrowForm" id="firstNameEN" value=""></div>(Easten-style)<br>
+
+  <h4>Address</h4>
+    <div class="form"> Postal Code: <input type="number" class="inputForm narrowForm" id="postalCodeEN" value=""></div><br>
+    <div class="form"> Address (Prefecture): <input type="text" class="inputForm narrowForm" id="prefectureEN" value=""><br>
+    <div class="form"> Address (City name): <input type="text" class="inputForm middleForm" id="citynameEN" value=""><br>
+    <div class="form"> Address (Street name): <input type="text" class="inputForm middleForm" id="streetNameEN" value=""><br>
+    <div class="form"> Address (Street number): <input type="text" class="inputForm middleForm" id="streetNumberEN" value=""><br>
+    <div class="form"> Address (Building name, floor, room number): <input type="text" class="inputForm middleForm" id="buildingEN" value=""><br>
+
+  <h4>Phone Number</h4>
+    <div class="form"> Fixed-line phone number: <input type="number" class="inputForm middleForm" id="phoneNumberEN" value="">　　　Fixed-line phone number(divided "-"): <input type="text" class="inputForm middleForm" id="phoneNumberENdivided" value=""></div><br>
+    <div class="form"> Mobile phone number: <input type="number" class="inputForm middleForm" id="mobileNumberEN" value="">　　　Mobile phone number(divide "-"): <input type="text" class="inputForm middleForm" id="mobileNumberENdivided" value=""></div><br>
+
+  <h4>Birthday</h4>
+    <div class="form"> Birthday(Full MM/DD/YYYY): <input type="text" class="inputForm middleForm" id="birthEN-USNumber" value="">　　　Birthday(Full Month,DD,YYYY): <input type="text" class="inputForm middleForm" id="birthEN-US" value=""></div><br>
+    <div class="form"> Birthday(Full DD/MM/YYYY): <input type="text" class="inputForm middleForm" id="birthEN-EUNumber" value="">　　　Birthday(Full DD,Month,YYYY): <input type="text" class="inputForm middleForm" id="birthEN-EU" value=""></div><br>
+    <div class="form"> Birth year: <input type="number" class="inputForm narrowForm" id="birthYearEN" value=""></div><br>
+    <div class="form"> Birth month: <input type="text" class="inputForm narrowForm" id="birthMonthEN" value="">　　　Birth month(number): <input type="number" class="inputForm narrowForm" id="birthMonthENNumber" value=""></div><br>
+    <div class="form"> Birth day: <input type="text" class="inputForm narrowForm" id="birthDayEN" value="">　　　Birth day(number): <input type="number" class="inputForm narrowForm" id="birthDayENNumber" value=""></div><br>
+
+  <h4>Credid Card</h4>
+    <div class="form"> Credit Card Number: <input type="number" class="inputForm middleForm" id="cardNumberEN" value="">　　　Credit Card Number(divided space): <input type="text" class="inputForm middleForm" id="cardNumberENdivided" value=""></div><br>
+    <div class="form"> Security Code: <input type="number" class="inputForm narrowForm" id="cardSecurityNumberEN" value=""></div><br>
+
+  <h4>Mail Address</h4>
+    <div class="form"> 1: <input type="email" class="inputForm middleForm" id="mailAddressEN1" value=""></div><br>
+    <div class="form"> 2: <input type="email" class="inputForm middleForm" id="mailAddressEN2" value=""></div><br>
+    <div class="form"> 3: <input type="email" class="inputForm middleForm" id="mailAddressEN3" value=""></div><br>
+    <div class="form"> 4: <input type="email" class="inputForm middleForm" id="mailAddressEN4" value=""></div><br>
+    <div class="form"> 5: <input type="email" class="inputForm middleForm" id="mailAddressEN5" value=""></div><br>
+
+  <h4>Passwords</h4>
+    <div class="form"> 1: <input type="text" class="inputForm middleForm" id="passwordEN1" value=""></div><br>
+    <div class="form"> 2: <input type="text" class="inputForm middleForm" id="passwordEN2" value=""></div><br>
+    <div class="form"> 3: <input type="text" class="inputForm middleForm" id="passwordEN3" value=""></div><br>
+    <div class="form"> 4: <input type="text" class="inputForm middleForm" id="passwordEN4" value=""></div><br>
+    <div class="form"> 5: <input type="text" class="inputForm middleForm" id="passwordEN5" value=""></div><br>
+    <div class="form"> 6: <input type="text" class="inputForm middleForm" id="passwordEN6" value=""></div><br>
+    <div class="form"> 7: <input type="text" class="inputForm middleForm" id="passwordEN7" value=""></div><br>
+    <div class="form"> 8: <input type="text" class="inputForm middleForm" id="passwordEN8" value=""></div><br>
+    <div class="form"> 9: <input type="text" class="inputForm middleForm" id="passwordEN9" value=""></div><br>
+    <div class="form"> 10: <input type="text" class="inputForm middleForm" id="passwordEN10" value=""></div><br>
+    <div class="form"> 11: <input type="text" class="inputForm middleForm" id="passwordEN11" value=""></div><br>
+    <div class="form"> 12: <input type="text" class="inputForm middleForm" id="passwordEN12" value=""></div><br>
+    <div class="form"> 13: <input type="text" class="inputForm middleForm" id="passwordEN13" value=""></div><br>
+    <div class="form"> 14: <input type="text" class="inputForm middleForm" id="passwordEN14" value=""></div><br>
+    <div class="form"> 15: <input type="text" class="inputForm middleForm" id="passwordEN15" value=""></div><br>
+    
+    <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.form {
+    margin: 5px 10px;
+}
+.wideForm {
+    width:400px;
+}
+.middleForm {
+    width:200px;
+}
+.narrowForm {
+    width:100px;
+}
